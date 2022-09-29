@@ -38,7 +38,61 @@ To check all version maintained by git
 git log
 ```
 
+To create version/commit all changes by git
+```
+git commit -m "message"
+```
 
+To send version/changes to the main branch of github
+```
+git push origin main
+```
+
+To check remote url (from where the data would be fetched or to the location where the data would be pushed)
+```
+git remote -v
+```
+
+To check the current branch
+```
+git branch 
+``` 
 
 Note: To ignore file or folder from git we can write name of file/folder in .gitignore file.
 
+To setup CI/CD pipeline in heroku we need 3 information
+
+1. HEROKU_EMAIL = sompura2019@gmail.com
+2. HEROKU_API_KEY = 5ba867fc-9bb3-49e0-acf2-013c09aaa81f
+3. HEROKU_APP_NAME = jay-ml-regression-app
+
+BUILD DOCKER IMAGE 
+```
+docker build -t <image_name>:<tag_name> .
+```
+Note: The name of image in docker must be always in small letters. Generally tag_name = latest always.
+
+FOR EXAMPLE HERE THE CODE WOULD BE FOLLOWING 
+```
+docker build -t ml-project:latest .
+```
+
+To list docker images 
+```
+docker images
+```
+
+To run docker image -- Get IMAGE ID from previous command and write it whose image we wish to run  
+```
+docker run -p 5000:5000 -e PORT=5000 <IMAGE ID>
+```
+
+To check running container in docker 
+```
+docker ps
+```
+
+To stop docker container - Get CONTAINER ID from previous command (docker ps)
+```
+docker stop <CONTAINER ID>  for e.g. docker stop 18a80486e31a
+```
