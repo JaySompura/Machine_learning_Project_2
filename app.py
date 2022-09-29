@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def index():
-    return "hello world"
+    return "CI/CD pipeline has been established"
     
 
 if __name__ == '__main__':
