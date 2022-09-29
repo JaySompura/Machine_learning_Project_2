@@ -63,7 +63,7 @@ Note: To ignore file or folder from git we can write name of file/folder in .git
 To setup CI/CD pipeline in heroku we need 3 information
 
 1. HEROKU_EMAIL = sompura2019@gmail.com
-2. HEROKU_API_KEY = 5ba867fc-9bb3-49e0-acf2-013c09aaa81f
+2. HEROKU_API_KEY = 
 3. HEROKU_APP_NAME = jay-ml-regression-app
 
 BUILD DOCKER IMAGE 
@@ -78,7 +78,7 @@ docker build -t ml-project:latest .
 ```
 
 To list docker images 
-```
+```File
 docker images
 ```
 
@@ -96,3 +96,7 @@ To stop docker container - Get CONTAINER ID from previous command (docker ps)
 ```
 docker stop <CONTAINER ID>  for e.g. docker stop 18a80486e31a
 ```
+
+To upload model on Heroku create a .github folder and then create a workflows folder in it. Then create a main.yaml file and which contains the given code. 
+
+Commit changes to github with message = "Added github work for Heroku deployment" and add secrets of heroku key, email and app name as given in main.yaml file. Make sure that name of secret should same as given in main.yaml file.
