@@ -100,3 +100,10 @@ docker stop <CONTAINER ID>  for e.g. docker stop 18a80486e31a
 To upload model on Heroku create a .github folder and then create a workflows folder in it. Then create a main.yaml file and which contains the given code. 
 
 Commit changes to github with message = "Added github work for Heroku deployment" and add secrets of heroku key, email and app name as given in main.yaml file. Make sure that name of secret should same as given in main.yaml file.
+
+Create a folder names housing and create a python file __init__.py 
+
+Create a setup.py file to excute all the requirements with following command in command prompt
+```
+python setup.py install
+```
